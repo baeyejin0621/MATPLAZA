@@ -116,16 +116,17 @@ main {
 
 /*비주얼 이미지*/
 .main_visual .visual_img {
-  width: 537px;
+  width: 440px;
   height: fit-content;
-  position: fixed;
+  position: absolute;
   top: 28vh;
-  left: 692px;
+  left: calc(50% - 25vh);
   z-index: -1;
 }
 
 .main_visual .visual_img > img {
   width: 100%;
+  object-fit: cover;
 }
 
 /*두번째 이미지 숨기기*/
@@ -183,4 +184,89 @@ main {
   width: fit-content;
   margin: 0 auto;
   margin-top: auto;
+}
+
+/*세번째 섹션*/
+.sec3 .card {
+  width: 100%;
+  height: 68vh;
+  padding: 40px;
+  box-sizing: border-box;
+  display: flex;
+  border-top: 1px solid #121212;
+}
+
+/*왼쪽*/
+.sec3 .card .left {
+  width: 20%;
+}
+
+.sec3 .card .left h3 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.sec3 .card .left p {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+/*오른쪽*/
+.sec3 .card .right {
+  flex: 1 1;
+}
+
+.sec3 .card .right h2 {
+  font-size: 3vw;
+  line-height: 3vw;
+}
+
+.sec3 .card .right p {
+  margin-top: 40px;
+  width: 50%;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+.more_btn {
+  display: block;
+  width: fit-content;
+  margin-top: 40px;
+  padding: 11px 80px 11px 20px;
+  border: 1px solid #121212;
+  box-sizing: border-box;
+  font-weight: 400;
+  line-height: 21px;
+  background: url(../img/sec3/ic_arrow_right.svg) no-repeat;
+  background-position: right 20px top 13px;
+}
+
+.sec3 .card .right .more_btn:hover {
+  animation: moveleft 0.3s linear alternate;
+}
+
+/*애니메이션*/
+@keyframes moveleft {
+  0% {
+    background-position: right 20px top 13px;
+  }
+  50% {
+    background-position: right 30px top 13px;
+  }
+  100% {
+    background-position: right 20px top 13px;
+  }
+}
+
+/*이미지 영역*/
+.sec3 .card .img_area {
+  width: 27%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sec3 .card .img_area > img {
+  width: 100%;
+  object-fit: cover;
 }
