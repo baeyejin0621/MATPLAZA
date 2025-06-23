@@ -146,6 +146,8 @@ button {
   border: none;
   background-color: transparent;
   padding: 0;
+  font-size: 18px;
+  font-family: "Inter", "Pretendard Variable", sans-serif;
 }
 a {
   text-decoration: none;
