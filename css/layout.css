@@ -1,0 +1,11 @@
+@import url(./reset.css);
+
+/*body 공통 설정*/
+body {
+  font-size: 18px;
+  font-family: "Inter", "Pretendard Variable", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: #121212;
+  word-break: keep-all;
+}
