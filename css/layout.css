@@ -229,7 +229,7 @@ main {
   font-weight: 400;
 }
 
-.more_btn {
+.sec3 .card .right a {
   display: block;
   width: fit-content;
   margin-top: 40px;
@@ -242,7 +242,8 @@ main {
   background-position: right 20px top 13px;
 }
 
-.sec3 .card .right .more_btn:hover {
+/*호버하면*/
+.sec3 .card .right a:hover {
   animation: moveleft 0.3s linear alternate;
 }
 
@@ -269,4 +270,100 @@ main {
 .sec3 .card .img_area > img {
   width: 100%;
   object-fit: cover;
+}
+
+/*네번째 섹션*/
+.sec4 h3 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.sec4 p {
+  line-height: 27px;
+  margin-top: 10px;
+}
+
+/*박스 영역*/
+.sec4 .box_wrap {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+}
+
+.sec4 .box_wrap a {
+  flex: 1 1;
+  overflow: hidden;
+  background-color: #2541e0;
+  color: #fff;
+  padding: 20px 30px;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+}
+
+.sec4 .box_wrap a:last-child {
+  background-color: #0976f2;
+}
+
+.sec4 .box_wrap a h2 {
+  font-size: 2vw;
+  line-height: 3vw;
+}
+
+.sec4 .box_wrap a p {
+  line-height: 27px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.sec4 .box_wrap a .more_info {
+  display: block;
+  color: #fff;
+  margin-top: auto;
+  border-top: 1px solid #fff;
+  font-weight: 400;
+  padding: 15px 0 5px;
+  display: flex;
+  gap: 12px;
+}
+
+/*오른쪽 화살표*/
+.sec4 .box_wrap a .more_info img {
+  filter: invert(1);
+}
+
+/*호버하면*/
+.sec4 .box_wrap a:hover .more_info img {
+  animation: moveright 0.4s alternate;
+}
+
+/*애니메이션*/
+@keyframes moveright {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/*박스 배경 이미지*/
+.sec4 .box_wrap a > img {
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+/*호버하면*/
+.sec4 .box_wrap a:hover > img {
+  opacity: 1;
 }
