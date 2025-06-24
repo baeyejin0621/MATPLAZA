@@ -310,12 +310,16 @@ main {
 .sec4 .box_wrap a h2 {
   font-size: 2vw;
   line-height: 3vw;
+  position: relative;
+  z-index: 1;
 }
 
 .sec4 .box_wrap a p {
   line-height: 27px;
   font-weight: 400;
   margin-top: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .sec4 .box_wrap a .more_info {
@@ -327,6 +331,8 @@ main {
   padding: 15px 0 5px;
   display: flex;
   gap: 12px;
+  position: relative;
+  z-index: 1;
 }
 
 /*오른쪽 화살표*/
@@ -361,6 +367,7 @@ main {
   left: 0;
   opacity: 0;
   transition: 0.5s;
+  filter: brightness(0.3);
 }
 
 /*호버하면*/
