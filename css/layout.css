@@ -102,6 +102,8 @@ header > .header_menu:hover > div:not(:last-child) {
   width: 100%;
   height: 100vh;
   cursor: default;
+  color: #fff;
+  display: none;
 }
 
 .all_menu .menu_bg {
@@ -122,10 +124,10 @@ header > .header_menu:hover > div:not(:last-child) {
   width: 100%;
   padding: 0 40px;
   box-sizing: border-box;
-  color: #fff;
-  position: absolute;
+  position: relative;
   top: 25px;
   left: 0;
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -160,6 +162,100 @@ header > .header_menu:hover > div:not(:last-child) {
 
 .all_menu .top h2 > img {
   height: 100%;
+}
+
+/*메뉴*/
+#menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 22vh 40px 0;
+  box-sizing: border-box;
+}
+
+#menu li {
+  width: 100%;
+  display: flex;
+  color: #fff;
+  gap: 6vw;
+  margin-bottom: 6vh;
+  letter-spacing: 0;
+  cursor: pointer;
+}
+
+#menu h4 {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  margin-top: 0.3vw;
+}
+
+#menu a {
+  color: #fff;
+  font-size: 3.6vw;
+  line-height: 3.5vw;
+  font-weight: 500;
+  position: relative;
+}
+
+/*서브메뉴*/
+#menu .submenu {
+  display: flex;
+  gap: 3vw;
+}
+
+#menu .submenu a {
+  height: fit-content;
+  font-size: 1.6vw;
+  line-height: 1.7vw;
+  position: relative;
+}
+
+/*메뉴에 호버하면 나타날 밑줄*/
+#menu a::after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  height: 1px;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: -0.5vw;
+  transition: 0.3s;
+}
+
+#menu .submenu a::after {
+  bottom: -0.4vw;
+}
+
+/*호버하면*/
+#menu a:hover::after {
+  width: 100%;
+}
+
+/*아랫 부분*/
+.all_menu .bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  padding: 0 40px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 30px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.all_menu .bottom > a {
+  color: #fff;
+}
+
+.all_menu .bottom > p {
+  margin-left: auto;
 }
 
 /*언어 선택*/
