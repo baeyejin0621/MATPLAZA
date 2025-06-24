@@ -427,8 +427,101 @@ main {
   margin-top: 5px;
   color: #898989;
   letter-spacing: -0.02em;
+  font-weight: 400;
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+/*여섯번째 섹션*/
+.sec6 {
+  padding: 60px 0;
+}
+
+.sec6 h3 {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0 40px;
+  margin-bottom: 20px;
+}
+
+/*컨텐츠*/
+.sec6 .content {
+  position: relative;
+  height: 73vh;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/*배경 이미지*/
+.sec6 .content .bg_img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.sec6 .content .bg_img > img {
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.3);
+}
+
+/*글자*/
+.sec6 .content .info {
+  position: relative;
+  color: #fff;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.sec6 .content .info > div {
+  width: 50%;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-bottom: 1px solid #fff;
+}
+
+.sec6 .content .info h4 {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.sec6 .content .info h2 {
+  margin-top: 2px;
+  font-size: 2vw;
+  line-height: 2.6vw;
+  font-weight: 400;
+}
+
+.sec6 .content .info p {
+  font-size: 16px;
+  line-height: 25px;
+}
+
+/*주소 및 영업 시간*/
+.sec6 .bottom_info {
+  padding: 0 40px;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sec6 .bottom_info > div {
+  display: flex;
+}
+
+.sec6 .bottom_info > div > h4 {
+  width: 100px;
 }
