@@ -17,7 +17,73 @@
     <div class="container">
       <!--헤더-->
       <header>
-        <button type="button">MENU</button>
+        <div class="header_menu">
+          MENU
+          <!--호버하면 나타날 선-->
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+          <div class="line4"></div>
+          <!--클릭하면 나타날 전체 메뉴-->
+          <div class="all_menu">
+            <div class="menu_bg">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="top">
+              <button type="button" class="close">close</button>
+              <button type="button" class="home">back to home</button>
+              <ul class="lan">
+                <li class="korean">KOR</li>
+                <li class="english">ENG</li>
+              </ul>
+              <h2>
+                <img src="./img/header/logo_w.svg" alt="로고" />
+              </h2>
+            </div>
+            <nav id="menu">
+              <ul>
+                <li>
+                  <a href="#">
+                    <h4>&#40;01&#41;</h4>
+                    <span>회사소개</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h4>&#40;02&#41;</h4>
+                    <span>사업영역</span>
+                    <div class="submenu">
+                      <span>건축자재</span>
+                      <span>솔루션</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h4>&#40;03&#41;</h4>
+                    <span>프로젝트</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h4>&#40;04&#41;</h4>
+                    <span>일과성장</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="bottom">
+              <a href="#">부정비리신고</a>
+              <a href="#">개인정보처리방침</a>
+              <a href="#">이메일무단수집거부</a>
+              <span>&copy;MATPLAZA. All rights reserved</span>
+            </div>
+          </div>
+        </div>
         <ul class="lan">
           <li class="korean">KOR</li>
           <li class="english">ENG</li>
@@ -30,26 +96,24 @@
       <main>
         <!--메인 비주얼-->
         <section class="main_visual">
-          <div class="con">
-            <p class="copy">
-              &copy;MATPLAZA<br />
-              All rights reserved
+          <p class="copy">
+            &copy;MATPLAZA<br />
+            All rights reserved
+          </p>
+          <div class="visual_img">
+            <img src="./img/main_visual/main01.webp" alt="building1" />
+            <img src="./img/sec2/main02.webp" alt="building2" />
+          </div>
+          <div class="bottom">
+            <p class="top_line">
+              건축용 자재 시장의 리더, 매트프라자가 있습니다
             </p>
-            <div class="visual_img">
-              <img src="./img/main_visual/main01.webp" alt="building1" />
-              <img src="./img/sec2/main02.webp" alt="building2" />
-            </div>
-            <div class="bottom">
-              <p class="top_line">
-                건축용 자재 시장의 리더, 매트프라자가 있습니다
+            <div class="bottom_line">
+              <p>global construction<br />materials</p>
+              <p class="center">
+                leading innovation<br />in building materials
               </p>
-              <div class="bottom_line">
-                <p>global construction<br />materials</p>
-                <p class="center">
-                  leading innovation<br />in building materials
-                </p>
-                <p>solutions</p>
-              </div>
+              <p>solutions</p>
             </div>
           </div>
         </section>
@@ -209,157 +273,146 @@
         </section>
         <!--네번째 섹션-->
         <section class="sec4">
-          <div class="con">
-            <h3>Our Solution</h3>
-            <p>
-              매트프라자는 지속적인 조달 혁신으로 효율적인 조달 프로세스 구축,
-              Source의 다변화 및<br />Global화를 능동적으로 추진하여 부가가치
-              창출과 Total Cost 절감으로 고객에게 최적의 Value를 제공합니다.
-            </p>
-            <div class="box_wrap">
-              <a href="#">
-                <h2>VE Solution</h2>
-                <p>
-                  매트프라자는 클라이언트가 요구하는 품질이나 디자인,<br />비용
-                  등을 고려하는 VE 솔루션을 실시합니다
-                </p>
-                <div class="more_info">
-                  <span>More info</span>
-                  <img
-                    src="./img/sec4/ic_arrow_right.svg"
-                    alt="오른쪽 화살표"
-                  />
-                </div>
-                <img src="./img/sec4/main_sol1.webp" alt="썸네일1" />
-              </a>
-              <a href="#">
-                <h2>ODP Solution</h2>
-                <p>
-                  인테리어 자재 및 설비재, 전기재 등의 주요 건축용 자재를<br />건축주가
-                  직접 구매 or NSC를 통해 직접 관리할 수 있는 솔루션을
-                  제공합니다
-                </p>
-                <div class="more_info">
-                  <span>More info</span>
-                  <img
-                    src="./img/sec4/ic_arrow_right.svg"
-                    alt="오른쪽 화살표"
-                  />
-                </div>
-                <img src="./img/sec4/main_sol2.webp" alt="썸네일2" />
-              </a>
-            </div>
+          <h3>Our Solution</h3>
+          <p>
+            매트프라자는 지속적인 조달 혁신으로 효율적인 조달 프로세스 구축,
+            Source의 다변화 및<br />Global화를 능동적으로 추진하여 부가가치
+            창출과 Total Cost 절감으로 고객에게 최적의 Value를 제공합니다.
+          </p>
+          <div class="box_wrap">
+            <a href="#">
+              <h2>VE Solution</h2>
+              <p>
+                매트프라자는 클라이언트가 요구하는 품질이나 디자인,<br />비용
+                등을 고려하는 VE 솔루션을 실시합니다
+              </p>
+              <div class="more_info">
+                <span>More info</span>
+                <img src="./img/sec4/ic_arrow_right.svg" alt="오른쪽 화살표" />
+              </div>
+              <img src="./img/sec4/main_sol1.webp" alt="썸네일1" />
+            </a>
+            <a href="#">
+              <h2>ODP Solution</h2>
+              <p>
+                인테리어 자재 및 설비재, 전기재 등의 주요 건축용 자재를<br />건축주가
+                직접 구매 or NSC를 통해 직접 관리할 수 있는 솔루션을 제공합니다
+              </p>
+              <div class="more_info">
+                <span>More info</span>
+                <img src="./img/sec4/ic_arrow_right.svg" alt="오른쪽 화살표" />
+              </div>
+              <img src="./img/sec4/main_sol2.webp" alt="썸네일2" />
+            </a>
           </div>
         </section>
         <!--다섯번째 섹션-->
         <section class="sec5">
-          <div class="con">
-            <div class="top_info">
-              <h3>Our Project</h3>
-              <a href="#">
-                <span>More</span>
-                <img src="./img/sec5/ic_arrow_right.svg" alt="오른쪽 화살표" />
-              </a>
-            </div>
-            <div class="swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="thumb">
-                    <img
-                      src="./img/sec5/Z0Attq8jQArT1KVK_인스파이어-원본-copy.webp"
-                      alt="인스파이어 엔터테이먼트 리조트"
-                    />
-                  </div>
-                  <div class="info">
-                    <div class="top">
-                      <h4>인스파이어 엔터테이먼트 리조트</h4>
-                      <p>2023.02</p>
-                    </div>
-                    <p class="bottom">이동가구 / 타일</p>
-                  </div>
+          <div class="top_info">
+            <h3>Our Project</h3>
+            <a href="#">
+              <span>More</span>
+              <img src="./img/sec5/ic_arrow_right.svg" alt="오른쪽 화살표" />
+            </a>
+          </div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="thumb">
+                  <img
+                    src="./img/sec5/Z0Attq8jQArT1KVK_인스파이어-원본-copy.webp"
+                    alt="인스파이어 엔터테이먼트 리조트"
+                  />
                 </div>
-                <div class="swiper-slide">
-                  <div class="thumb">
-                    <img
-                      src="./img/sec5/Z0Auoa8jQArT1KV3_페어몬트-원본-1.webp"
-                      alt="페어몬트 앰배서더 서울 호텔"
-                    />
+                <div class="info">
+                  <div class="top">
+                    <h4>인스파이어 엔터테이먼트 리조트</h4>
+                    <p>2023.02</p>
                   </div>
-                  <div class="info">
-                    <div class="top">
-                      <h4>페어몬트 앰배서더 서울 호텔</h4>
-                      <p>2021.02</p>
-                    </div>
-                    <p class="bottom">
-                      이동가구 / 석재 / 타일 / 하드웨어 / 카페트 / 위생도기 /
-                      커튼&블라인드
-                    </p>
-                  </div>
+                  <p class="bottom">이동가구 / 타일</p>
                 </div>
-                <div class="swiper-slide">
-                  <div class="thumb">
-                    <img
-                      src="./img/sec5/Z0AxDq8jQArT1KXp_빌라쥬드아난티-대안2-1.webp"
-                      alt="빌라쥬 드 아난티"
-                    />
-                  </div>
-                  <div class="info">
-                    <div class="top">
-                      <h4>빌라쥬 드 아난티</h4>
-                      <p>2023.07</p>
-                    </div>
-                    <p class="bottom">이동가구</p>
-                  </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="thumb">
+                  <img
+                    src="./img/sec5/Z0Auoa8jQArT1KV3_페어몬트-원본-1.webp"
+                    alt="페어몬트 앰배서더 서울 호텔"
+                  />
                 </div>
-                <div class="swiper-slide">
-                  <div class="thumb">
-                    <img
-                      src="./img/sec5/Z0AxC68jQArT1KXm_래미안원베일리-원본-1.webp"
-                      alt="래미안 원베일리"
-                    />
+                <div class="info">
+                  <div class="top">
+                    <h4>페어몬트 앰배서더 서울 호텔</h4>
+                    <p>2021.02</p>
                   </div>
-                  <div class="info">
-                    <div class="top">
-                      <h4>래미안 원베일리</h4>
-                      <p>2023.08</p>
-                    </div>
-                    <p class="bottom">
-                      주방,일반가구 / 석재 / 타일 / 가구원부자재
-                    </p>
-                  </div>
+                  <p class="bottom">
+                    이동가구 / 석재 / 타일 / 하드웨어 / 카페트 / 위생도기 /
+                    커튼&블라인드
+                  </p>
                 </div>
-                <div class="swiper-slide">
-                  <div class="thumb">
-                    <img
-                      src="./img/sec5/Z0AwUK8jQArT1KXE_파크원타워-원본-1.webp"
-                      alt="파크원 타워"
-                    />
-                  </div>
-                  <div class="info">
-                    <div class="top">
-                      <h4>파크원 타워</h4>
-                      <p>2022.07</p>
-                    </div>
-                    <p class="bottom">석재 / 건축하드웨어 / 큐비클</p>
-                  </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="thumb">
+                  <img
+                    src="./img/sec5/Z0AxDq8jQArT1KXp_빌라쥬드아난티-대안2-1.webp"
+                    alt="빌라쥬 드 아난티"
+                  />
                 </div>
-                <div class="swiper-slide">
-                  <div class="thumb">
-                    <img
-                      src="./img/sec5/ZzqCDq8jQArT081e_안다즈강남호텔-4-.webp"
-                      alt="안다즈 서울 강남 호텔"
-                    />
+                <div class="info">
+                  <div class="top">
+                    <h4>빌라쥬 드 아난티</h4>
+                    <p>2023.07</p>
                   </div>
-                  <div class="info">
-                    <div class="top">
-                      <h4>안다즈 서울 강남 호텔</h4>
-                      <p>2019.09</p>
-                    </div>
-                    <p class="bottom">
-                      이동가구 / 석재 / 하드웨어 / 카페트 / 위생도기 /
-                      커튼&블라인드
-                    </p>
+                  <p class="bottom">이동가구</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="thumb">
+                  <img
+                    src="./img/sec5/Z0AxC68jQArT1KXm_래미안원베일리-원본-1.webp"
+                    alt="래미안 원베일리"
+                  />
+                </div>
+                <div class="info">
+                  <div class="top">
+                    <h4>래미안 원베일리</h4>
+                    <p>2023.08</p>
                   </div>
+                  <p class="bottom">
+                    주방,일반가구 / 석재 / 타일 / 가구원부자재
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="thumb">
+                  <img
+                    src="./img/sec5/Z0AwUK8jQArT1KXE_파크원타워-원본-1.webp"
+                    alt="파크원 타워"
+                  />
+                </div>
+                <div class="info">
+                  <div class="top">
+                    <h4>파크원 타워</h4>
+                    <p>2022.07</p>
+                  </div>
+                  <p class="bottom">석재 / 건축하드웨어 / 큐비클</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="thumb">
+                  <img
+                    src="./img/sec5/ZzqCDq8jQArT081e_안다즈강남호텔-4-.webp"
+                    alt="안다즈 서울 강남 호텔"
+                  />
+                </div>
+                <div class="info">
+                  <div class="top">
+                    <h4>안다즈 서울 강남 호텔</h4>
+                    <p>2019.09</p>
+                  </div>
+                  <p class="bottom">
+                    이동가구 / 석재 / 하드웨어 / 카페트 / 위생도기 /
+                    커튼&블라인드
+                  </p>
                 </div>
               </div>
             </div>
@@ -401,7 +454,56 @@
           </div>
         </section>
       </main>
-      <footer></footer>
+      <footer>
+        <p class="intro">
+          소싱의 다변화와 글로벌화를 능동적으로 추진하여 원가 혁신, 품질 혁신,
+          업무방식 혁신,<br />구매 방식 혁신을 이루어 건자재 시장에서 투명하고
+          전문화된 조직으로 건전한 시장문화를 선도합니다.
+        </p>
+        <div class="footer_info">
+          <nav id="sitemap">
+            <h4>Sitemap</h4>
+            <ul>
+              <li><a href="#">home</a></li>
+              <li><a href="#">company</a></li>
+              <li><a href="#">business</a></li>
+              <li><a href="#">project</a></li>
+              <li><a href="#">career</a></li>
+            </ul>
+          </nav>
+          <div>
+            <h4>Email</h4>
+            <p>matplaza@matplaza.com</p>
+          </div>
+          <div>
+            <h4>Call Us</h4>
+            <ul>
+              <li>Tel&#41; 02 3708 5500</li>
+              <li>Fax&#41; 02 3708 5539</li>
+            </ul>
+          </div>
+          <div class="address">
+            <h4>Address</h4>
+            <div class="headquarter">
+              <h5>본사</h5>
+              <p>
+                서울특별시 송파구 송파대로 167&#40;문정동&#41;<br />테라타워 1차
+                B동 1119~1122호
+              </p>
+            </div>
+            <div class="showroom">
+              <h5>쇼룸<br />아틀라스콩코드 서울</h5>
+              <p>서울특별시 강남구 언주로 133길 21<br />아이소이빌딩 1층</p>
+            </div>
+          </div>
+        </div>
+        <div class="terms">
+          <a href="#">부정비리신고</a>
+          <a href="#">개인정보처리방침</a>
+          <a href="#">이메일무단수집거부</a>
+          <span>&copy;MATPLAZA. All rights reserved</span>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

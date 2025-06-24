@@ -11,6 +11,7 @@ body {
   word-break: keep-all;
   /*스크롤 기능은 남기고 스크롤바만 숨기기*/
   -ms-overflow-style: none;
+  scroll-behavior: auto;
 }
 
 /*스크롤 기능은 남기고 스크롤바만 숨기기*/
@@ -18,33 +19,29 @@ body {
   display: none;
 }
 
-/*컨텐츠 영역*/
-.con {
-  width: 1840px;
-  height: fit-content;
-  margin: 0 auto;
-}
-
 /*섹션 공통 설정*/
 section {
   width: 100%;
   height: fit-content;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 
 /*헤더*/
 header {
-  width: 1840px;
+  width: 100%;
   height: fit-content;
+  padding: 0 40px;
+  box-sizing: border-box;
   display: flex;
   position: fixed;
   top: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 999;
+  left: 0;
+  z-index: 99;
 }
 
 /*메뉴 버튼*/
-header button {
+header > .header_menu {
   width: fit-content;
   height: fit-content;
   font-weight: 700;
@@ -52,6 +49,117 @@ header button {
   letter-spacing: -0.02em;
   cursor: pointer;
   margin-right: auto;
+  position: relative;
+}
+
+header > .header_menu > div:not(:last-child) {
+  background-color: #121212;
+  position: absolute;
+  transform: scale(0);
+  transform-origin: top left;
+  transition: 0.4s;
+}
+
+header > .header_menu .line1 {
+  width: 73px;
+  height: 1px;
+  top: -5px;
+  left: -10px;
+}
+
+header > .header_menu .line2 {
+  width: 1px;
+  height: 41px;
+  left: -5px;
+  bottom: -10px;
+}
+
+header > .header_menu .line3 {
+  width: 73px;
+  height: 1px;
+  left: -10px;
+  bottom: -5px;
+}
+
+header > .header_menu .line4 {
+  width: 1px;
+  height: 41px;
+  top: -10px;
+  right: -5px;
+}
+
+/*호버하면*/
+header > .header_menu:hover > div:not(:last-child) {
+  transform: scale(1);
+}
+
+/*메뉴 클릭하면 나타날 전체 메뉴*/
+.all_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  cursor: default;
+}
+
+.all_menu .menu_bg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+}
+
+.all_menu .menu_bg > div {
+  width: 20%;
+  height: 100%;
+  background-color: #09284f;
+}
+
+/*윗부분*/
+.all_menu .top {
+  width: 100%;
+  padding: 0 40px;
+  box-sizing: border-box;
+  color: #fff;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.all_menu .top button {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.all_menu .top button:last-of-type {
+  font-weight: 500;
+  line-height: 1;
+  position: absolute;
+  bottom: 0;
+  left: calc(6vw + 68px);
+  letter-spacing: 0;
+}
+
+/*로고*/
+.all_menu .top h2 {
+  height: 17px;
+  position: absolute;
+  top: 2px;
+  right: 40px;
+  cursor: pointer;
+}
+
+.all_menu .top h2 > img {
+  height: 100%;
 }
 
 /*언어 선택*/
@@ -63,6 +171,8 @@ header .lan {
   margin-right: 250px;
   font-size: 16px;
   line-height: 18px;
+  font-weight: 500;
+  letter-spacing: 0;
 }
 
 header .lan > li {
@@ -79,7 +189,7 @@ h1 {
   height: fit-content;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 40px;
 }
 
 h1 > img {
@@ -96,10 +206,6 @@ main {
 .main_visual {
   width: 100%;
   height: 100vh;
-}
-
-.main_visual .con {
-  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -369,7 +475,7 @@ main {
 
 /*다섯번째 섹션*/
 .sec5 {
-  padding: 60px 0;
+  padding: 60px 40px;
 }
 
 /*상단 영역*/
@@ -524,4 +630,83 @@ main {
 
 .sec6 .bottom_info > div > h4 {
   width: 100px;
+}
+
+/*푸터*/
+footer {
+  width: 100%;
+  height: 100vh;
+  padding: 0 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+footer .intro {
+  width: 100%;
+  height: 50vh;
+  line-height: 26px;
+  font-weight: 400;
+  display: flex;
+  align-items: flex-end;
+}
+
+footer .footer_info {
+  width: 100%;
+  padding: 20px 0;
+  flex: 1 1;
+  border-top: 1px solid #121212;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 400;
+}
+
+footer .footer_info h4 {
+  font-size: 13px;
+  line-height: 16px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/*사이트맵*/
+footer #sitemap ul {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+footer #sitemap ul > li:first-child {
+  text-decoration: underline;
+}
+
+/*주소*/
+footer .address > div {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+footer .address h5 {
+  text-align: right;
+  width: 150px;
+  position: absolute;
+  left: -170px;
+  top: 0;
+}
+
+/*맨 밑줄*/
+footer .terms {
+  width: 100%;
+  padding: 13px 0 20px;
+  border-top: 1px solid #121212;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  display: flex;
+  gap: 20px;
+}
+
+footer .terms span {
+  margin-left: auto;
 }
