@@ -2,6 +2,8 @@
 
 /*body 공통 설정*/
 body {
+  width: 100%;
+  height: fit-content;
   font-size: 18px;
   font-weight: 500;
   font-family: "Inter", "Pretendard Variable", sans-serif;
@@ -34,6 +36,7 @@ header {
   padding: 0 40px;
   box-sizing: border-box;
   display: flex;
+  align-items: center;
   position: fixed;
   top: 25px;
   left: 0;
@@ -50,6 +53,7 @@ header > .header_menu {
   cursor: pointer;
   margin-right: auto;
   position: relative;
+  opacity: 0;
 }
 
 header > .header_menu > div:not(:last-child) {
@@ -271,6 +275,10 @@ header .lan {
   letter-spacing: 0;
 }
 
+header > .lan {
+  opacity: 0;
+}
+
 header .lan > li {
   cursor: pointer;
 }
@@ -281,11 +289,13 @@ header .lan .english {
 
 /*로고*/
 h1 {
-  width: 130px;
+  width: 1840px;
   height: fit-content;
   position: absolute;
-  top: 0;
-  right: 40px;
+  top: 9vh;
+  right: 50%;
+  transform: translate(50%, -38px) scale(0.2, 0.2);
+  opacity: 0;
 }
 
 h1 > img {
@@ -314,21 +324,27 @@ main {
   padding-top: 25px;
   font-size: 16px;
   line-height: 18px;
+  opacity: 0;
 }
 
 /*비주얼 이미지*/
 .main_visual .visual_img {
-  width: 440px;
-  height: fit-content;
+  width: 50vh;
+  height: 50vh;
+  background-color: #121212;
   position: absolute;
   top: 28vh;
   left: calc(50% - 25vh);
   z-index: -1;
+  opacity: 0;
+  transform-origin: bottom center;
+  transform: scale(0.4, 0);
 }
 
 .main_visual .visual_img > img {
   width: 100%;
   object-fit: cover;
+  opacity: 0;
 }
 
 /*두번째 이미지 숨기기*/
@@ -345,11 +361,12 @@ main {
 
 .main_visual .bottom .top_line {
   line-height: 22px;
-  border-bottom: 1px solid #121212;
   padding-bottom: 12px;
+  opacity: 0;
 }
 
 .main_visual .bottom .bottom_line {
+  border-top: 1px solid #121212;
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
@@ -357,6 +374,12 @@ main {
   line-height: 18px;
   padding-top: 12px;
   position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.main_visual .bottom .bottom_line * {
+  opacity: 0;
 }
 
 .main_visual .bottom .bottom_line .center {
