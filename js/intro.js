@@ -13,15 +13,19 @@
 */
 
 document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(ScrollTrigger);
+
   gsap
-    //시작하고 0.7초 동안 기다렸다가 애니메이션 실행
-    .timeline({
-      delay: 0.7,
+    .timeline()
+    //인트로 동안 메인 비주얼 화면 고정
+    .to("body", {
+      overflow: "hidden",
     })
     //메인 비주얼 이미지 박스 나타나기
     .to(".visual_img", {
       scaleY: "1",
       opacity: 1,
+      delay: 0.7,
       duration: 0.7,
     })
     //로고 나타나기
@@ -70,11 +74,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
       ".header_menu, header > .lan, .main_visual .copy",
       {
         y: -50,
+        duration: 0.5,
       },
       {
         opacity: 1,
         y: 0,
-        duration: 0.5,
       },
       "<"
     )
@@ -94,4 +98,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     .add(() => {
       document.body.style.overflow = "auto";
     });
+
+  window.history.scrollRestoration = "manual";
 });

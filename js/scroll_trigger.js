@@ -11,10 +11,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         end: "39% 0%",
         duration: 3,
         scrub: 1,
-        onRefresh: () => {
-          //로딩되면 맨위로 스크롤 이동
-          window.scrollTo(0, 0);
-        },
       },
     })
     .to("h1", {
@@ -24,33 +20,32 @@ document.addEventListener("DOMContentLoaded", (event) => {
       x: 0,
     });
 
-  //메인 비주얼 아래 선
   gsap
     .timeline({
       scrollTrigger: {
         trigger: ".main_visual",
-        start: "20% 0%",
-        end: "20% 0%",
-        duration: 1,
+        start: "10% 0%",
+        end: "70% 0%",
         scrub: 1,
       },
     })
+    //메인 비주얼 아래 글
     .to(".main_visual .bottom .bottom_line *", {
+      duration: 1,
       opacity: 0,
     })
+    //메인 비주얼 아래 선
     .to(".main_visual .bottom .bottom_line", {
-      scale: 0,
-    });
-
-  //메인 비주얼 아래 글자들
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: ".main_visual",
-      start: "20% 0%",
-      end: "100% 0%",
-      duration: 3,
-      scrub: 1,
-      markers: true,
-    },
-  });
+      duration: 4,
+      scaleX: 0,
+    })
+    .to(
+      ".main_visual .bottom .top_line",
+      {
+        ease: "power4.out",
+        opacity: 0,
+        duration: 3,
+      },
+      "<"
+    );
 });
