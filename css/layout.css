@@ -420,6 +420,7 @@ main {
   width: fit-content;
   margin: 0 auto;
   margin-top: auto;
+  font-weight: 400;
 }
 
 /*세번째 섹션*/

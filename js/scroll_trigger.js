@@ -83,7 +83,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
       {
         width: 1395,
         maxWidth: 1395,
-        x: "-50%",
         duration: 0.5,
       },
       "-=.1"
@@ -131,7 +130,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: ".sec3 .card:first-child",
         start: "0% 0%",
         end: "25% 0%",
-        ease: "ease-out",
         scrub: 1,
         dataLag: 1,
       },
