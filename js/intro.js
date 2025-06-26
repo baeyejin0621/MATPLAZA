@@ -1,5 +1,10 @@
 "use strict";
 
+/*새로고침하면 스크롤 맨위로 올라오도록*/
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
+
 /*
 흰 화면으로 시작
 메인 비주얼 이미지와 같은 높이의 검정 박스가 opacity가 높아지며 아래서 위로 쭉 올라옴
@@ -54,7 +59,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     .to(
       ".visual_img > img:first-child",
       {
-        opacity: 1,
+        filter: "brightness(1)",
         duration: 0.5,
       },
       "-=.2"
@@ -98,9 +103,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
     .add(() => {
       document.body.style.overflow = "auto";
     });
-
-  window.history.scrollRestoration = "manual";
-  window.addEventListener("load", () => {
-    window.scrollTo(0, 0);
-  });
 });

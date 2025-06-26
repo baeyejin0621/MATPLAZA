@@ -331,7 +331,6 @@ main {
 .main_visual .visual_img {
   width: 50vh;
   height: 50vh;
-  background-color: #121212;
   position: absolute;
   top: 28vh;
   left: 50%;
@@ -344,8 +343,12 @@ main {
 
 .main_visual .visual_img > img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
-  opacity: 0;
+}
+
+.main_visual .visual_img > img:first-child {
+  filter: brightness(0);
 }
 
 /*두번째 이미지 숨기기*/
@@ -425,12 +428,11 @@ main {
 }
 
 .sec3 .card {
-  width: 100%;
   height: 68vh;
   padding: 40px;
-  box-sizing: border-box;
   display: flex;
   border-top: 1px solid #121212;
+  overflow: hidden;
 }
 
 /*왼쪽*/
@@ -446,11 +448,13 @@ main {
 .sec3 .card .left p {
   font-size: 13px;
   line-height: 16px;
+  font-weight: 400;
 }
 
 /*오른쪽*/
 .sec3 .card .right {
   flex: 1 1;
+  height: fit-content;
 }
 
 .sec3 .card .right h2 {
@@ -506,6 +510,7 @@ main {
 
 .sec3 .card .img_area > img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
