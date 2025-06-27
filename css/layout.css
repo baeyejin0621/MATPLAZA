@@ -427,6 +427,10 @@ main {
 .sec3 {
   padding: 0;
 }
+.sec3_inner {
+  width: 100%;
+  height: fit-content;
+}
 
 .sec3 .card {
   height: 68vh;

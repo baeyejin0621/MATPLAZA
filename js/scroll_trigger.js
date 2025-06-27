@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   ScrollSmoother.create({
     content: "#scroll_smoother",
     smooth: 2,
-    effects: true,
   });
 
   /*ScrollTrigger*/
@@ -83,6 +82,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       {
         width: 1395,
         maxWidth: 1395,
+        x: "-50%",
         duration: 0.5,
       },
       "-=.1"
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     .timeline({
       scrollTrigger: {
         trigger: ".sec2",
-        start: "90% 100%",
+        start: "100% 100%",
         end: "110% 100%",
         duration: 0.3,
         scrub: 1,
@@ -112,123 +112,74 @@ document.addEventListener("DOMContentLoaded", (event) => {
     );
 
   //세번째 섹션 고정 효과
-  gsap.timeline({
+  // gsap.to(".sec3", {
+  //   scrollTrigger: {
+  //     trigger: ".sec3",
+  //     start: "0% 0%",
+  //     end: "95% 100%",
+  //     pin: true,
+  //     pinSpacing: false,
+  //     pinType: "transform",
+  //     anticipatePin: 1,
+  //     srcub: 1,
+  //   },
+  //   y: "-978.1",
+  // });
+
+  ScrollTrigger.create({
+    trigger: ".sec3",
+    start: "0% 0%",
+    end: "95% 100%",
+    pin: true,
+    pinSpacing: false,
+    scurb: 1,
+  });
+
+  gsap.to(".sec3_inner", {
+    y: -978.1,
     scrollTrigger: {
-      trigger: ".sec3",
-      start: "0% 0%",
-      end: "2% 0%",
-      pin: true,
-      pinSpacing: false,
-      srcub: 1,
+      trigger: ".sec3_inner",
+      start: "2% 0%",
+      end: "120% 100%",
+      ease: "power4.in",
+      scrub: 1,
+      markers: true,
     },
   });
 
-  //첫번째 카드
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: ".sec3 .card:first-child",
-        start: "0% 0%",
-        end: "25% 0%",
-        scrub: 1,
-        dataLag: 1,
-      },
-    })
-    .to(".sec3 .card:first-child", {
-      height: 110,
-      duration: 10,
-    });
+  // const ani1 = gsap.timeline();
+  // ani1.to(".sec3_inner", { y: "-978.1px" });
 
-  //두번째 카드
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: ".sec3",
-        start: "5% 20%",
-        end: "12% 50%",
-        scrub: 1,
-      },
-    })
-    .to(".sec3 .card:nth-child(2)", {
-      height: 110,
-      duration: 10,
-    });
+  // ScrollTrigger.create({
+  //   animation: ani1,
+  //   trigger: ".sec3",
+  //   start: "0% 0%",
+  //   end: "100% 100%",
+  //   pin: true,
+  //   pinSpacing: false,
+  //   pinType: "transform",
+  //   anticipatePin: 1,
+  //   srcub: 1,
+  //   markers: true,
+  // });
 
-  //세번째 카드
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: ".sec3",
-        start: "8% 20%",
-        end: "15% 50%",
-        scrub: 1,
-      },
-    })
-    .to(".sec3 .card:nth-child(3)", {
-      height: 110,
-      duration: 10,
-    });
+  //세번째 섹션 카드 height 좁아지는 애니메이션
+  const sec3Card = Array.from(document.querySelectorAll(".sec3 .card"));
+  sec3Card.pop();
 
-  //네번째 카드
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: ".sec3",
-        start: "11% 20%",
-        end: "18% 50%",
-        scrub: 1,
-      },
-    })
-    .to(".sec3 .card:nth-child(4)", {
-      height: 110,
-      duration: 10,
-    });
-
-  //다섯번째 카드
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: ".sec3",
-        start: "14% 20%",
-        end: "21% 50%",
-        scrub: 1,
-      },
-    })
-    .to(".sec3 .card:nth-child(5)", {
-      height: 110,
-      duration: 10,
-    });
-
-  //여섯번째 카드
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: ".sec3",
-        start: "17% 20%",
-        end: "24% 50%",
-        scrub: 1,
-      },
-    })
-    .to(".sec3 .card:nth-child(6)", {
-      height: 110,
-      duration: 10,
-    });
-
-  //일곱번째 카드
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: ".sec3",
-        start: "20% 20%",
-        end: "27% 50%",
-        scrub: 1,
-      },
-    })
-    .to(".sec3 .card:nth-child(7)", {
-      height: 110,
-      duration: 10,
-    })
-    .add(() => {
-      document.querySelector(".sec3").style.height = "fit-content";
-    });
+  sec3Card.forEach((card, i) => {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: card,
+          start: `-${i * 20}% 0%`,
+          end: "90% 0%",
+          scrub: 1,
+        },
+      })
+      .to(card, {
+        height: 110,
+        duration: 30,
+      });
+  });
 });
