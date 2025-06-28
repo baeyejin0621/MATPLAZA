@@ -23,65 +23,14 @@
     <div class="container">
       <!--헤더-->
       <header>
-        <div class="header_menu">
+        <button type="button">
           MENU
           <!--호버하면 나타날 선-->
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
           <div class="line4"></div>
-          <!--클릭하면 나타날 전체 메뉴-->
-          <div class="all_menu">
-            <div class="menu_bg">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div class="top">
-              <button type="button" class="close">close</button>
-              <button type="button" class="home">back to home</button>
-              <ul class="lan">
-                <li class="korean">KOR</li>
-                <li class="english">ENG</li>
-              </ul>
-              <h2>
-                <img src="./img/header/logo_w.svg" alt="로고" />
-              </h2>
-            </div>
-            <nav id="menu">
-              <ul>
-                <li>
-                  <h4>&#40;01&#41;</h4>
-                  <a href="#">회사소개</a>
-                </li>
-                <li>
-                  <h4>&#40;02&#41;</h4>
-                  <a href="#">사업영역</a>
-                  <div class="submenu">
-                    <a href="#">건축자재</a>
-                    <a href="#">솔루션</a>
-                  </div>
-                </li>
-                <li>
-                  <h4>&#40;03&#41;</h4>
-                  <a href="#">프로젝트</a>
-                </li>
-                <li>
-                  <h4>&#40;04&#41;</h4>
-                  <a href="#">일과성장</a>
-                </li>
-              </ul>
-            </nav>
-            <div class="bottom">
-              <a href="#">부정비리신고</a>
-              <a href="#">개인정보처리방침</a>
-              <a href="#">이메일무단수집거부</a>
-              <p>&copy;MATPLAZA. All rights reserved</p>
-            </div>
-          </div>
-        </div>
+        </button>
         <ul class="lan">
           <li class="korean">KOR</li>
           <li class="english">ENG</li>
@@ -90,6 +39,72 @@
           <img src="./img/header/logo.svg" alt="logo" />
         </h1>
       </header>
+      <!--클릭하면 나타날 전체 메뉴-->
+      <div class="all_menu">
+        <div class="menu_bg">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="top">
+          <button type="button" class="close">close</button>
+          <button type="button" class="home">back to home</button>
+          <ul class="lan">
+            <li class="korean">KOR</li>
+            <li class="english">ENG</li>
+          </ul>
+          <h2>
+            <img src="./img/header/logo_w.svg" alt="로고" />
+          </h2>
+        </div>
+        <nav id="menu">
+          <ul>
+            <li>
+              <h4>&#40;01&#41;</h4>
+              <a href="#">회사소개</a>
+            </li>
+            <li>
+              <h4>&#40;02&#41;</h4>
+              <a href="#">사업영역</a>
+              <div class="submenu">
+                <a href="#">건축자재</a>
+                <a href="#">솔루션</a>
+              </div>
+            </li>
+            <li>
+              <h4>&#40;03&#41;</h4>
+              <a href="#">프로젝트</a>
+            </li>
+            <li>
+              <h4>&#40;04&#41;</h4>
+              <a href="#">일과성장</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="bottom">
+          <a href="#">부정비리신고</a>
+          <a href="#">개인정보처리방침</a>
+          <a href="#">이메일무단수집거부</a>
+          <p>&copy;MATPLAZA. All rights reserved</p>
+        </div>
+      </div>
+      <!--라이트 박스-->
+      <div class="light_box">
+        <button type="button">Close</button>
+        <div class="img_wrap">
+          <img
+            src="./img/sec5/Z0Attq8jQArT1KVK_인스파이어-원본-copy.webp"
+            alt="인스파이어 엔터테이먼트 리조트"
+          />
+        </div>
+        <div class="info">
+          <span class="name">인스파이어 엔터테이먼트 리조트</span>
+          <span class="p">이동가구 / 타일</span>
+          <span class="date">2023. 12</span>
+        </div>
+      </div>
       <div id="scroll_smoother">
         <!--메인-->
         <main>
@@ -325,7 +340,13 @@
             </div>
             <div class="swiper">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
+                <div
+                  class="swiper-slide"
+                  data-src="./img/sec5/Z0Attq8jQArT1KVK_인스파이어-원본-copy.webp"
+                  data-name="인스파이어 엔터테이먼트 리조트"
+                  data-date="2023. 02"
+                  data-p="이동가구 / 타일"
+                >
                   <div class="thumb">
                     <img
                       src="./img/sec5/Z0Attq8jQArT1KVK_인스파이어-원본-copy.webp"
@@ -335,12 +356,19 @@
                   <div class="info">
                     <div class="top">
                       <h4>인스파이어 엔터테이먼트 리조트</h4>
-                      <p>2023.02</p>
+                      <p>2023. 02</p>
                     </div>
                     <p class="bottom">이동가구 / 타일</p>
                   </div>
                 </div>
-                <div class="swiper-slide">
+                <div
+                  class="swiper-slide"
+                  data-src="./img/sec5/Z0Auoa8jQArT1KV3_페어몬트-원본-1.webp"
+                  data-name="페어몬트 앰배서더 서울 호텔"
+                  data-date="2021. 02"
+                  data-p="이동가구 / 석재 / 타일 / 하드웨어 / 카페트 / 위생도기 /
+                      커튼&블라인드"
+                >
                   <div class="thumb">
                     <img
                       src="./img/sec5/Z0Auoa8jQArT1KV3_페어몬트-원본-1.webp"
@@ -350,7 +378,7 @@
                   <div class="info">
                     <div class="top">
                       <h4>페어몬트 앰배서더 서울 호텔</h4>
-                      <p>2021.02</p>
+                      <p>2021. 02</p>
                     </div>
                     <p class="bottom">
                       이동가구 / 석재 / 타일 / 하드웨어 / 카페트 / 위생도기 /
@@ -358,7 +386,13 @@
                     </p>
                   </div>
                 </div>
-                <div class="swiper-slide">
+                <div
+                  class="swiper-slide"
+                  data-src="./img/sec5/Z0AxDq8jQArT1KXp_빌라쥬드아난티-대안2-1.webp"
+                  data-name="빌라쥬 드 아난티"
+                  data-date="2023. 07"
+                  data-p="이동가구"
+                >
                   <div class="thumb">
                     <img
                       src="./img/sec5/Z0AxDq8jQArT1KXp_빌라쥬드아난티-대안2-1.webp"
@@ -368,12 +402,18 @@
                   <div class="info">
                     <div class="top">
                       <h4>빌라쥬 드 아난티</h4>
-                      <p>2023.07</p>
+                      <p>2023. 07</p>
                     </div>
                     <p class="bottom">이동가구</p>
                   </div>
                 </div>
-                <div class="swiper-slide">
+                <div
+                  class="swiper-slide"
+                  data-src="./img/sec5/Z0AxC68jQArT1KXm_래미안원베일리-원본-1.webp"
+                  data-name="래미안 원베일리"
+                  data-date="2023. 08"
+                  data-p="주방,일반가구 / 석재 / 타일 / 가구원부자재"
+                >
                   <div class="thumb">
                     <img
                       src="./img/sec5/Z0AxC68jQArT1KXm_래미안원베일리-원본-1.webp"
@@ -383,14 +423,20 @@
                   <div class="info">
                     <div class="top">
                       <h4>래미안 원베일리</h4>
-                      <p>2023.08</p>
+                      <p>2023. 08</p>
                     </div>
                     <p class="bottom">
                       주방,일반가구 / 석재 / 타일 / 가구원부자재
                     </p>
                   </div>
                 </div>
-                <div class="swiper-slide">
+                <div
+                  class="swiper-slide"
+                  data-src="./img/sec5/Z0AwUK8jQArT1KXE_파크원타워-원본-1.webp"
+                  data-name="파크원 타워"
+                  data-date="2022. 07"
+                  data-p="석재 / 건축하드웨어 / 큐비클"
+                >
                   <div class="thumb">
                     <img
                       src="./img/sec5/Z0AwUK8jQArT1KXE_파크원타워-원본-1.webp"
@@ -400,12 +446,19 @@
                   <div class="info">
                     <div class="top">
                       <h4>파크원 타워</h4>
-                      <p>2022.07</p>
+                      <p>2022. 07</p>
                     </div>
                     <p class="bottom">석재 / 건축하드웨어 / 큐비클</p>
                   </div>
                 </div>
-                <div class="swiper-slide">
+                <div
+                  class="swiper-slide"
+                  data-src="./img/sec5/ZzqCDq8jQArT081e_안다즈강남호텔-4-.webp"
+                  data-name="안다즈 서울 강남 호텔"
+                  data-date="2019. 09"
+                  data-p="이동가구 / 석재 / 하드웨어 / 카페트 / 위생도기 /
+                      커튼&블라인드"
+                >
                   <div class="thumb">
                     <img
                       src="./img/sec5/ZzqCDq8jQArT081e_안다즈강남호텔-4-.webp"
@@ -415,7 +468,7 @@
                   <div class="info">
                     <div class="top">
                       <h4>안다즈 서울 강남 호텔</h4>
-                      <p>2019.09</p>
+                      <p>2019. 09</p>
                     </div>
                     <p class="bottom">
                       이동가구 / 석재 / 하드웨어 / 카페트 / 위생도기 /
@@ -433,6 +486,7 @@
               <div class="bg_img">
                 <img src="./img/sec6/main_showroom.webp" alt="showroom" />
               </div>
+              <div class="black"></div>
               <div class="info">
                 <div>
                   <h4>&#40;01&#41;</h4>
@@ -520,5 +574,9 @@
     <script src="./js/intro.js"></script>
     <!--gsap - scrolltrigger-->
     <script src="./js/scroll_trigger.js"></script>
+    <!--슬라이드-->
+    <script src="./js/swiper.js"></script>
+    <!--클릭 이벤트-->
+    <script src="./js/click.js"></script>
   </body>
 </html>

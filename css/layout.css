@@ -44,7 +44,7 @@ header {
 }
 
 /*메뉴 버튼*/
-header > .header_menu {
+header > button {
   width: fit-content;
   height: fit-content;
   font-weight: 700;
@@ -56,7 +56,7 @@ header > .header_menu {
   opacity: 0;
 }
 
-header > .header_menu > div:not(:last-child) {
+header > button > div {
   background-color: #121212;
   position: absolute;
   transform: scale(0);
@@ -64,28 +64,28 @@ header > .header_menu > div:not(:last-child) {
   transition: 0.4s;
 }
 
-header > .header_menu .line1 {
+header > button .line1 {
   width: 73px;
   height: 1px;
   top: -5px;
   left: -10px;
 }
 
-header > .header_menu .line2 {
+header > button .line2 {
   width: 1px;
   height: 41px;
   left: -5px;
   bottom: -10px;
 }
 
-header > .header_menu .line3 {
+header > button .line3 {
   width: 73px;
   height: 1px;
   left: -10px;
   bottom: -5px;
 }
 
-header > .header_menu .line4 {
+header > button .line4 {
   width: 1px;
   height: 41px;
   top: -10px;
@@ -93,7 +93,7 @@ header > .header_menu .line4 {
 }
 
 /*호버하면*/
-header > .header_menu:hover > div:not(:last-child) {
+header > button:hover > div {
   transform: scale(1);
 }
 
@@ -107,7 +107,6 @@ header > .header_menu:hover > div:not(:last-child) {
   height: 100vh;
   cursor: default;
   color: #fff;
-  display: none;
 }
 
 .all_menu .menu_bg {
@@ -121,6 +120,13 @@ header > .header_menu:hover > div:not(:last-child) {
   width: 20%;
   height: 100%;
   background-color: #09284f;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
+
+.all_menu .menu_bg > div:nth-child(2n) {
+  transform-origin: bottom;
 }
 
 /*윗부분*/
@@ -263,7 +269,7 @@ header > .header_menu:hover > div:not(:last-child) {
 }
 
 /*언어 선택*/
-header .lan {
+.lan {
   width: fit-content;
   height: fit-content;
   display: flex;
@@ -279,11 +285,11 @@ header > .lan {
   opacity: 0;
 }
 
-header .lan > li {
+.lan > li {
   cursor: pointer;
 }
 
-header .lan .english {
+.lan .english {
   color: #acacac;
 }
 
@@ -553,6 +559,12 @@ main {
   flex-direction: column;
   position: relative;
   cursor: pointer;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.sec4 .box_wrap a * {
+  opacity: 0;
 }
 
 .sec4 .box_wrap a:last-child {
@@ -585,6 +597,12 @@ main {
   gap: 12px;
   position: relative;
   z-index: 1;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.sec4 .box_wrap a .more_info span {
+  opacity: 0;
 }
 
 /*오른쪽 화살표*/
@@ -657,6 +675,24 @@ main {
 /*슬라이드 영역*/
 .sec5 .swiper {
   margin-top: 20px;
+  overflow: visible;
+}
+
+.sec5 .swiper-slide {
+  width: 423px;
+  cursor: pointer;
+}
+
+.sec5 .swiper-slide .thumb {
+  width: 100%;
+  height: 30vw;
+  overflow: hidden;
+}
+
+.sec5 .swiper-slide .thumb > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .sec5 .swiper-slide .info {
@@ -681,6 +717,54 @@ main {
   white-space: nowrap;
 }
 
+/*라이트 박스*/
+.light_box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 900;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.light_box button {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.light_box .img_wrap {
+  height: 80vh;
+  overflow: hidden;
+}
+
+.light_box .img_wrap img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.light_box .info {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
 /*여섯번째 섹션*/
 .sec6 {
   padding: 60px 0;
@@ -699,6 +783,8 @@ main {
   height: 73vh;
   padding: 40px;
   box-sizing: border-box;
+  transform-origin: left;
+  transform: scaleX(0);
 }
 
 /*배경 이미지*/
@@ -715,6 +801,18 @@ main {
   width: 100%;
   object-fit: cover;
   filter: brightness(0.3);
+}
+
+/*검정색 박스*/
+.sec6 .content .black {
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+  transform-origin: left;
+  transform: scaleX(1);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /*글자*/
@@ -734,6 +832,12 @@ main {
   flex-direction: column;
   justify-content: flex-end;
   border-bottom: 1px solid #fff;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.sec6 .content .info > div * {
+  opacity: 0;
 }
 
 .sec6 .content .info h4 {
@@ -763,6 +867,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  opacity: 0;
 }
 
 .sec6 .bottom_info > div {

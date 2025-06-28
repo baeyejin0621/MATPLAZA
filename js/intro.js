@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     )
     //헤더 나타나기
     .fromTo(
-      ".header_menu, header > .lan, .main_visual .copy",
+      "header > :is(button, .lan), .main_visual .copy",
       {
         y: -50,
         duration: 0.5,

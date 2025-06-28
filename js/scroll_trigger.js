@@ -140,10 +140,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     scrollTrigger: {
       trigger: ".sec3_inner",
       start: "2% 0%",
-      end: "120% 100%",
-      ease: "power4.in",
+      end: "90% 100%",
       scrub: 1,
-      markers: true,
     },
   });
 
@@ -172,7 +170,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       .timeline({
         scrollTrigger: {
           trigger: card,
-          start: `-${i * 20}% 0%`,
+          start: `-${i * 30}% 0%`,
           end: "90% 0%",
           scrub: 1,
         },
@@ -182,4 +180,122 @@ document.addEventListener("DOMContentLoaded", (event) => {
         duration: 30,
       });
   });
+
+  //네번째 섹션 나타나기
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".sec4",
+        start: "0% 60%",
+        end: "100% 100%",
+      },
+    })
+    .to(".sec4 .box_wrap a:first-child", {
+      scaleX: 1,
+      duration: 0.6,
+    })
+    .to(".sec4 .box_wrap a .more_info", {
+      opacity: 1,
+      scaleX: 1,
+      duration: 0.3,
+    })
+    .to(
+      ".sec4 .box_wrap a:first-child h2",
+      {
+        opacity: 1,
+        duration: 0.2,
+      },
+      "+=.1"
+    )
+    .to(
+      ".sec4 .box_wrap a:first-child :is(p, .more_info span)",
+      {
+        opacity: 1,
+        duration: 0.1,
+      },
+      "-=.1"
+    )
+    .to(".sec4 .box_wrap a:first-child .more_info img", {
+      opacity: 1,
+      duration: 0.1,
+    })
+    .to(
+      ".sec4 .box_wrap a:last-child",
+      {
+        scaleX: 1,
+        duration: 0.6,
+      },
+      "-=.9"
+    )
+    .to(".sec4 .box_wrap a:last-child h2", {
+      opacity: 1,
+      duration: 0.2,
+    })
+    .to(
+      ".sec4 .box_wrap a:last-child :is(p, .more_info span)",
+      {
+        opacity: 1,
+        duration: 0.1,
+      },
+      "-=.1"
+    )
+    .to(".sec4 .box_wrap a:last-child .more_info img", {
+      opacity: 1,
+      duration: 0.1,
+    });
+
+  //다섯번째 섹션 슬라이드 올라오는 효과
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".sec5",
+      start: "0% 60%",
+      end: "100% 100%",
+    },
+  });
+
+  //슬라이드
+  const slide = document.querySelectorAll(".sec5 .swiper-slide");
+  slide.forEach((element) => {
+    tl.fromTo(
+      element,
+      {
+        opacity: 0,
+        y: 30,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.2,
+      }
+    );
+  });
+
+  //여섯번째 섹션
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".sec6",
+        start: "0% 60%",
+        end: "100% 100%",
+      },
+    })
+    .to(".sec6 .content", {
+      scaleX: 1,
+    })
+    .to(".sec6 .content .black", {
+      scaleX: 0,
+    })
+    .to(
+      ".sec6 .content .info > div",
+      {
+        scaleX: 1,
+      },
+      "-=.1"
+    )
+    .to(".sec6 .content .info > div *", {
+      opacity: 1,
+    })
+    .to(".sec6 .bottom_info", {
+      opacity: 1,
+    });
 });
