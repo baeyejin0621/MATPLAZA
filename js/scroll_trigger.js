@@ -112,20 +112,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     );
 
   //세번째 섹션 고정 효과
-  // gsap.to(".sec3", {
-  //   scrollTrigger: {
-  //     trigger: ".sec3",
-  //     start: "0% 0%",
-  //     end: "95% 100%",
-  //     pin: true,
-  //     pinSpacing: false,
-  //     pinType: "transform",
-  //     anticipatePin: 1,
-  //     srcub: 1,
-  //   },
-  //   y: "-978.1",
-  // });
-
   ScrollTrigger.create({
     trigger: ".sec3",
     start: "0% 0%",
@@ -145,6 +131,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
   });
 
+  // (1)
+  // gsap.to(".sec3", {
+  //   scrollTrigger: {
+  //     trigger: ".sec3",
+  //     start: "0% 0%",
+  //     end: "95% 100%",
+  //     pin: true,
+  //     pinSpacing: false,
+  //     pinType: "transform",
+  //     anticipatePin: 1,
+  //     srcub: 1,
+  //   },
+  //   y: "-978.1",
+  // });
+
+  // (2)
   // const ani1 = gsap.timeline();
   // ani1.to(".sec3_inner", { y: "-978.1px" });
 

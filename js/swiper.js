@@ -30,7 +30,10 @@ slide.forEach((element) => {
     lightBoxP.innerText = element.getAttribute("data-p");
     lightBoxDate.innerText = element.getAttribute("data-date");
     lightBox.style.display = "flex";
-    lightBox.style.opacity = 1;
+    gsap.to(lightBox, {
+      opacity: 1,
+      duration: 0.3,
+    });
   });
 });
 

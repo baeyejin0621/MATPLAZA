@@ -23,6 +23,7 @@
     <div class="container">
       <!--헤더-->
       <header>
+        <!--메뉴 버튼-->
         <button type="button">
           MENU
           <!--호버하면 나타날 선-->
@@ -31,16 +32,16 @@
           <div class="line3"></div>
           <div class="line4"></div>
         </button>
+        <!--언어 선택-->
         <ul class="lan">
           <li class="korean">KOR</li>
           <li class="english">ENG</li>
         </ul>
+        <!--로고-->
         <h1>
           <img src="./img/header/logo.svg" alt="logo" />
         </h1>
-      </header>
-      <!--클릭하면 나타날 전체 메뉴-->
-      <div class="all_menu">
+        <!--클릭하면 나타날 전체 메뉴-->
         <div class="menu_bg">
           <div></div>
           <div></div>
@@ -48,48 +49,45 @@
           <div></div>
           <div></div>
         </div>
-        <div class="top">
-          <button type="button" class="close">close</button>
-          <button type="button" class="home">back to home</button>
-          <ul class="lan">
-            <li class="korean">KOR</li>
-            <li class="english">ENG</li>
-          </ul>
-          <h2>
-            <img src="./img/header/logo_w.svg" alt="로고" />
-          </h2>
+        <div class="all_menu">
+          <div class="top">
+            <button type="button" class="home">back to home</button>
+            <h2>
+              <img src="./img/header/logo_w.svg" alt="로고" />
+            </h2>
+          </div>
+          <nav id="menu">
+            <ul>
+              <li>
+                <h4>&#40;01&#41;</h4>
+                <a href="#">회사소개</a>
+              </li>
+              <li>
+                <h4>&#40;02&#41;</h4>
+                <a href="#">사업영역</a>
+                <div class="submenu">
+                  <a href="#">건축자재</a>
+                  <a href="#">솔루션</a>
+                </div>
+              </li>
+              <li>
+                <h4>&#40;03&#41;</h4>
+                <a href="#">프로젝트</a>
+              </li>
+              <li>
+                <h4>&#40;04&#41;</h4>
+                <a href="#">일과성장</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="bottom">
+            <a href="#">부정비리신고</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">이메일무단수집거부</a>
+            <p>&copy;MATPLAZA. All rights reserved</p>
+          </div>
         </div>
-        <nav id="menu">
-          <ul>
-            <li>
-              <h4>&#40;01&#41;</h4>
-              <a href="#">회사소개</a>
-            </li>
-            <li>
-              <h4>&#40;02&#41;</h4>
-              <a href="#">사업영역</a>
-              <div class="submenu">
-                <a href="#">건축자재</a>
-                <a href="#">솔루션</a>
-              </div>
-            </li>
-            <li>
-              <h4>&#40;03&#41;</h4>
-              <a href="#">프로젝트</a>
-            </li>
-            <li>
-              <h4>&#40;04&#41;</h4>
-              <a href="#">일과성장</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="bottom">
-          <a href="#">부정비리신고</a>
-          <a href="#">개인정보처리방침</a>
-          <a href="#">이메일무단수집거부</a>
-          <p>&copy;MATPLAZA. All rights reserved</p>
-        </div>
-      </div>
+      </header>
       <!--라이트 박스-->
       <div class="light_box">
         <button type="button">Close</button>

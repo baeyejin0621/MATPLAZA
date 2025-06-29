@@ -53,7 +53,9 @@ header > button {
   cursor: pointer;
   margin-right: auto;
   position: relative;
+  z-index: 2;
   opacity: 0;
+  color: #121212;
 }
 
 header > button > div {
@@ -97,36 +99,40 @@ header > button:hover > div {
   transform: scale(1);
 }
 
-/*메뉴 클릭하면 나타날 전체 메뉴*/
-.all_menu {
+/*메뉴 클릭하면 나타날 전체 메뉴 배경*/
+.menu_bg {
+  width: 100%;
+  height: 100%;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
-  width: 100%;
-  height: 100vh;
-  cursor: default;
-  color: #fff;
+  z-index: 1;
 }
 
-.all_menu .menu_bg {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  position: absolute;
-}
-
-.all_menu .menu_bg > div {
+.menu_bg > div {
   width: 20%;
   height: 100%;
   background-color: #09284f;
   transform: scaleY(0);
   transform-origin: top;
-  transition: 0.3s;
 }
 
-.all_menu .menu_bg > div:nth-child(2n) {
+.menu_bg > div:nth-child(2n) {
   transform-origin: bottom;
+}
+
+/*메뉴 클릭하면 나타날 전체 메뉴*/
+.all_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  cursor: default;
+  color: #fff;
+  display: none;
 }
 
 /*윗부분*/
@@ -141,6 +147,7 @@ header > button:hover > div {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  opacity: 0;
 }
 
 .all_menu .top button {
@@ -150,13 +157,10 @@ header > button:hover > div {
   line-height: 20px;
   text-transform: uppercase;
   cursor: pointer;
-}
-
-.all_menu .top button:last-of-type {
   font-weight: 500;
   line-height: 1;
   position: absolute;
-  bottom: 0;
+  top: 2px;
   left: calc(6vw + 68px);
   letter-spacing: 0;
 }
@@ -182,6 +186,7 @@ header > button:hover > div {
   width: 100%;
   padding: 22vh 40px 0;
   box-sizing: border-box;
+  opacity: 0;
 }
 
 #menu li {
@@ -258,6 +263,7 @@ header > button:hover > div {
   line-height: 20px;
   font-weight: 500;
   letter-spacing: 0;
+  opacity: 0;
 }
 
 .all_menu .bottom > a {
@@ -269,7 +275,7 @@ header > button:hover > div {
 }
 
 /*언어 선택*/
-.lan {
+header > .lan {
   width: fit-content;
   height: fit-content;
   display: flex;
@@ -279,17 +285,17 @@ header > button:hover > div {
   line-height: 18px;
   font-weight: 500;
   letter-spacing: 0;
-}
-
-header > .lan {
   opacity: 0;
+  color: #121212;
+  position: relative;
+  z-index: 2;
 }
 
-.lan > li {
+header > .lan > li {
   cursor: pointer;
 }
 
-.lan .english {
+header > .lan .english {
   color: #acacac;
 }
 
@@ -302,6 +308,7 @@ h1 {
   right: 50%;
   transform: translate(50%, -38px) scale(0.2, 0.2);
   opacity: 0;
+  z-index: 1;
 }
 
 h1 > img {
@@ -653,6 +660,7 @@ main {
   display: flex;
   gap: 10px;
   font-size: 16px;
+  position: relative;
 }
 
 .sec5 .top_info a:hover > img {
@@ -733,7 +741,6 @@ main {
   gap: 10px;
   color: #fff;
   opacity: 0;
-  transition: 0.3s;
 }
 
 .light_box button {
@@ -887,6 +894,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: relative;
 }
 
 footer .intro {
