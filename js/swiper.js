@@ -4,7 +4,16 @@
 var swiper = new Swiper(".swiper", {
   slidesPerView: "auto",
   slidesPerGroup: 1,
-  spaceBetween: 20,
+
+  breakpoints: {
+    320: {
+      spaceBetween: 12,
+    },
+
+    1001: {
+      spaceBetween: 20,
+    },
+  },
 });
 
 /*슬라이드 클릭하면 그에 맞는 라이트 박스 나타나기*/

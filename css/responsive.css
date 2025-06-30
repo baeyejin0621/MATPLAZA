@@ -1,0 +1,537 @@
+@charset "utf-8";
+
+/*모바일*/
+@media screen and (min-width: 320px) {
+  /*헤더*/
+  header {
+    padding: 0 15px;
+    top: 13px;
+  }
+
+  /*메뉴 버튼*/
+  header > button {
+    font-size: 14px;
+    line-height: 15px;
+    opacity: 1;
+  }
+
+  /*메뉴 버튼에 호버하면 나오는 선*/
+  header > button:hover > div {
+    transform: scale(0);
+  }
+
+  /*로고*/
+  h1 {
+    top: 15vw;
+    width: calc(100% - 30px);
+    opacity: 1;
+    transform: translateX(50%) scale(1);
+  }
+
+  /*전체 메뉴 배경*/
+  .menu_bg > div:is(:nth-child(4), :nth-child(5)) {
+    display: none;
+  }
+
+  /*전체 메뉴*/
+  .all_menu {
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  .all_menu .top h2 {
+    display: none;
+  }
+
+  .all_menu .top button {
+    font-size: 14px;
+    line-height: 15px;
+    top: -12px;
+    left: 90px;
+  }
+
+  /*언어 선택*/
+  header > .lan {
+    font-size: 14px;
+    line-height: 15px;
+    margin-right: 0;
+    display: none;
+  }
+
+  #menu {
+    padding: 36vw 0 0 15px;
+  }
+
+  #menu li {
+    margin-bottom: 8vw;
+    gap: 7vw;
+  }
+
+  #menu h4 {
+    font-size: 14px;
+    margin-top: 0;
+  }
+
+  #menu a {
+    font-size: 7vw;
+    line-height: 7vw;
+  }
+
+  #menu .submenu a {
+    font-size: 5vw;
+    line-height: 5.2vw;
+  }
+
+  .all_menu .bottom {
+    width: calc(100% - 30px);
+    font-size: 13px;
+    line-height: 17px;
+    bottom: 15px;
+    left: 15px;
+    padding: 9px 0 0;
+    gap: 0;
+    justify-content: space-between;
+    border-top: 1px solid #fff;
+  }
+
+  .all_menu .bottom p {
+    display: none;
+  }
+
+  /*섹션 공통 설정*/
+  section {
+    padding: 0 15px;
+  }
+
+  /*메인 비주얼, 두번째 섹션 부모*/
+  .sec_wrapper {
+    padding-bottom: 110px;
+  }
+
+  /*메인 비주얼*/
+  .main_visual {
+    height: fit-content;
+  }
+
+  /*저작권 표시*/
+  .main_visual .copy {
+    opacity: 1;
+    position: absolute;
+    left: 50%;
+    top: 13px;
+    transform: translateX(-50%);
+    font-size: 13px;
+    line-height: 14px;
+    padding: 0;
+  }
+
+  /*비주얼 이미지*/
+  .visual_img {
+    width: calc(100vw - 30px);
+    height: calc(100vw - 30px);
+    transform: scale(1, 0);
+    transform-origin: top;
+    top: 119px;
+    left: 15px;
+    position: sticky;
+  }
+
+  .visual_img > img:last-of-type {
+    width: 100%;
+  }
+
+  /*메인 비주얼 아래 부분*/
+  .main_visual .bottom {
+    height: fit-content;
+    margin-top: 170px;
+    padding: 0;
+  }
+
+  .main_visual .bottom .top_line {
+    opacity: 1;
+    padding-bottom: 10px;
+    font-size: 14px;
+    line-height: 15px;
+  }
+
+  .main_visual .bottom .bottom_line {
+    transform: scaleX(1);
+    font-size: 14px;
+    line-height: 15px;
+    padding-top: 10px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main_visual .bottom .bottom_line * {
+    opacity: 1;
+  }
+
+  .main_visual .bottom .bottom_line .center {
+    top: auto;
+    left: auto;
+    transform: translateX(0);
+    position: static;
+  }
+
+  .main_visual .bottom .bottom_line .center + p {
+    position: absolute;
+    right: 0;
+    top: 10px;
+  }
+
+  /*두번째 섹션*/
+  .sec2 {
+    height: calc(100vw - 30px + 100px);
+    margin-top: 50px;
+    padding: 50px 0 0;
+  }
+
+  .sec2 h2 {
+    font-size: 5vw;
+    letter-spacing: 0;
+    line-height: 20px;
+  }
+
+  .sec2 p {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -0.03em;
+    transform: translateY(60px);
+  }
+
+  /*br 태그 보여주기*/
+  .sec2 p br {
+    display: block;
+  }
+
+  /*세번째 섹션*/
+  .sec3_inner {
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  .sec3 .card {
+    padding: 15px 0;
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .sec3 .card .left {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .sec3 .card .left :is(h3, p) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .sec3 .card .right {
+    margin-top: 34px;
+    flex: none;
+  }
+
+  .sec3 .card .right h2 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .sec3 .card .right p {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 20px;
+    width: 100%;
+  }
+
+  .sec3 .card .right a {
+    margin-top: 15px;
+    width: 100%;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 10px 50px 10px 14px;
+    background-size: 27px;
+    background-position: right 13px top 13px;
+    letter-spacing: -0.02em;
+  }
+
+  /*호버 효과 지우기*/
+  .sec3 .card .right a:hover {
+    animation: none;
+  }
+
+  /*이미지 영역*/
+  .sec3 .card .img_area {
+    width: 100%;
+    height: 220px;
+    margin-top: 20px;
+  }
+
+  /*네번째 섹션*/
+  .sec4 {
+    padding: 70px 15px 0;
+  }
+
+  .sec4 h3 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .sec4 p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+  }
+
+  .sec4 p br {
+    display: none;
+  }
+
+  .sec4 .box_wrap {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sec4 .box_wrap a {
+    transform: scaleX(1);
+    padding: 18px 20px 15px;
+    height: 210px;
+    flex: none;
+    justify-content: space-between;
+  }
+
+  .sec4 .box_wrap a * {
+    opacity: 1;
+  }
+
+  .sec4 .box_wrap a h2 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .sec4 .box_wrap a p {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 10px;
+  }
+
+  .sec4 .box_wrap a .more_info {
+    transform: scaleX(1);
+    padding: 8px 0 0;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .sec4 .box_wrap a .more_info span {
+    opacity: 1;
+  }
+
+  .sec4 .box_wrap a .more_info img {
+    width: 24px;
+  }
+
+  /*다섯번째 섹션*/
+  .sec5 {
+    padding: 70px 0 0;
+  }
+
+  .sec5 .top_info {
+    padding: 0 15px;
+  }
+
+  .sec5 h3 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .sec5 .top_info a {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .sec5 .top_info a > img {
+    height: 12px;
+    width: fit-content;
+  }
+
+  /*슬라이드*/
+  .sec5 .swiper {
+    margin-top: 10px;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  .sec5 .swiper-slide {
+    width: 215px;
+  }
+
+  .sec5 .swiper-slide .thumb {
+    height: 80vw;
+  }
+
+  .sec5 .swiper-slide .info {
+    margin-top: 7px;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+  }
+
+  .sec5 .swiper-slide .info .top h4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /*라이트 박스*/
+  .light_box button {
+    right: 15px;
+    top: 10px;
+    font-size: 14px;
+  }
+
+  .light_box .img_wrap {
+    height: fit-content;
+  }
+
+  .light_box .info {
+    padding: 0 15px;
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .light_box .info br {
+    display: none;
+  }
+
+  /*여섯번째 섹션*/
+  .sec6 {
+    padding: 70px 0 0;
+  }
+
+  .sec6 h3 {
+    padding: 0 15px;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 0;
+  }
+
+  .sec6 .content {
+    transform: scaleX(1);
+    margin-top: 10px;
+    height: 90vw;
+    padding: 15px;
+  }
+
+  .sec6 .content .black {
+    transform: scaleX(0);
+  }
+
+  .sec6 .content .info {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .sec6 .content .info > div {
+    transform: scaleX(1);
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  .sec6 .content .info > div * {
+    opacity: 1;
+  }
+
+  .sec6 .content .info h2 {
+    margin-top: 5px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .sec6 .content .info p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .sec6 .bottom_info {
+    opacity: 1;
+    padding: 0 15px;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    gap: 5px;
+  }
+
+  .sec6 .bottom_info > div:first-of-type {
+    margin-top: 5px;
+  }
+
+  .sec6 .bottom_info > div > h4 {
+    width: 80px;
+  }
+
+  /*푸터*/
+  footer {
+    padding: 0 15px;
+    gap: 15px;
+  }
+
+  footer .intro {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  footer .intro br {
+    display: none;
+  }
+
+  footer .footer_info {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  footer #sitemap {
+    display: none;
+  }
+
+  footer .footer_info > div > h4 {
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 0;
+  }
+
+  footer .footer_info > div > :is(p, ul, div) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  footer .footer_info > div h5 {
+    position: static;
+    width: 100%;
+    text-align: left;
+    margin-top: 5px;
+  }
+
+  footer .terms {
+    padding: 9px 0 15px;
+    justify-content: flex-end;
+  }
+
+  footer .terms a {
+    display: none;
+  }
+
+  footer .terms span {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

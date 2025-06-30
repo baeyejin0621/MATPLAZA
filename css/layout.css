@@ -111,7 +111,8 @@ header > button:hover > div {
 }
 
 .menu_bg > div {
-  width: 20%;
+  flex: 1 1;
+  width: 100%;
   height: 100%;
   background-color: #09284f;
   transform: scaleY(0);
@@ -252,6 +253,7 @@ header > button:hover > div {
 /*아랫 부분*/
 .all_menu .bottom {
   width: 100%;
+  height: fit-content;
   position: absolute;
   bottom: 25px;
   left: 0;
@@ -285,7 +287,6 @@ header > .lan {
   line-height: 18px;
   font-weight: 500;
   letter-spacing: 0;
-  opacity: 0;
   color: #121212;
   position: relative;
   z-index: 2;
@@ -341,7 +342,7 @@ main {
 }
 
 /*비주얼 이미지*/
-.main_visual .visual_img {
+.visual_img {
   width: 50vh;
   height: 50vh;
   position: absolute;
@@ -354,18 +355,14 @@ main {
   overflow: hidden;
 }
 
-.main_visual .visual_img > img {
+.visual_img > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.main_visual .visual_img > img:first-child {
-  filter: brightness(0);
-}
-
 /*두번째 이미지 숨기기*/
-.main_visual .visual_img > img:last-child {
+.visual_img > img:last-of-type {
   width: 1395px;
   object-fit: cover;
   opacity: 0;
@@ -373,6 +370,17 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+/*인트로 화면에서 쓸 검정 박스*/
+.visual_img .black {
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: bottom;
 }
 
 /*메인 비주얼 아래 부분*/
@@ -424,6 +432,7 @@ main {
 
 .sec2 h2 {
   font-size: 3vw;
+  line-height: 68px;
   width: fit-content;
   margin: 0 auto;
   letter-spacing: 0.03em;
@@ -436,10 +445,16 @@ main {
   font-weight: 400;
 }
 
+/*모바일에서만 나타날 br 태그 숨겨주기*/
+.sec2 p br {
+  display: none;
+}
+
 /*세번째 섹션*/
 .sec3 {
   padding: 0;
 }
+
 .sec3_inner {
   width: 100%;
   height: fit-content;
@@ -546,6 +561,7 @@ main {
 .sec4 p {
   line-height: 27px;
   margin-top: 10px;
+  font-weight: 400;
 }
 
 /*박스 영역*/
@@ -561,6 +577,7 @@ main {
   background-color: #2541e0;
   color: #fff;
   padding: 20px 30px;
+  box-sizing: border-box;
   height: 55vh;
   display: flex;
   flex-direction: column;
@@ -599,6 +616,7 @@ main {
   margin-top: auto;
   border-top: 1px solid #fff;
   font-weight: 400;
+  line-height: 21px;
   padding: 15px 0 5px;
   display: flex;
   gap: 12px;
@@ -658,6 +676,7 @@ main {
 
 .sec5 .top_info a {
   display: flex;
+  align-items: center;
   gap: 10px;
   font-size: 16px;
   position: relative;
@@ -748,6 +767,7 @@ main {
   right: 40px;
   top: 20px;
   font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
   color: #fff;
 }
@@ -806,6 +826,7 @@ main {
 
 .sec6 .content .bg_img > img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   filter: brightness(0.3);
 }

@@ -18,89 +18,110 @@ window.onbeforeunload = function () {
 */
 
 document.addEventListener("DOMContentLoaded", (event) => {
-  gsap.registerPlugin(ScrollTrigger);
+  //1000px 이하일 때 인트로
+  gsap.matchMedia().add("(max-width: 1000px)", () => {
+    gsap
+      .timeline()
+      .to(".visual_img", {
+        delay: 0.7,
+        duration: 0.5,
+        scaleY: 1,
+        opacity: 1,
+      })
+      .to(".visual_img .black", {
+        scaleY: 0,
+        duration: 0.5,
+      });
+  });
 
-  gsap
-    .timeline()
-    //인트로 동안 메인 비주얼 화면 고정
-    .to("body", {
-      overflow: "hidden",
-    })
-    //메인 비주얼 이미지 박스 나타나기
-    .to(".visual_img", {
-      scaleY: "1",
-      opacity: 1,
-      delay: 0.7,
-      duration: 0.7,
-    })
-    //로고 나타나기
-    .to(
-      "h1",
-      {
+  //1000px 이상일 때 인트로
+  gsap.matchMedia().add("(min-width: 1001px)", () => {
+    gsap
+      .timeline()
+      //인트로 동안 메인 비주얼 화면 고정
+      .to("body", {
+        overflow: "hidden",
+      })
+      //메인 비주얼 이미지 박스 나타나기
+      .to(".visual_img", {
+        scaleY: 1,
         opacity: 1,
+        delay: 0.7,
         duration: 0.7,
-      },
-      "-=.1"
-    )
-    //밑에 선 나타나기
-    .to(".main_visual .bottom .bottom_line", {
-      scaleX: "1",
-      duration: 0.7,
-    })
-    //메인 비주얼 이미지 박스 넓어지기
-    .to(
-      ".visual_img",
-      {
-        scaleX: "1",
-      },
-      "<"
-    )
-    //메인 비주얼 이미지 나타나기
-    .to(
-      ".visual_img > img:first-child",
-      {
-        filter: "brightness(1)",
-        duration: 0.5,
-      },
-      "-=.2"
-    )
-    //로고 커지기
-    .to(
-      "h1",
-      {
-        scale: 1,
-        y: 0,
-        duration: 0.8,
-      },
-      "+=.2"
-    )
-    //헤더 나타나기
-    .fromTo(
-      "header > :is(button, .lan), .main_visual .copy",
-      {
-        y: -50,
-        duration: 0.5,
-      },
-      {
+      })
+      //로고 나타나기
+      .to(
+        "h1",
+        {
+          opacity: 1,
+          duration: 0.7,
+        },
+        "-=.1"
+      )
+      //밑에 선 나타나기
+      .to(".main_visual .bottom .bottom_line", {
+        scaleX: 1,
+        duration: 0.7,
+      })
+      //메인 비주얼 이미지 박스 넓어지기
+      .to(
+        ".visual_img",
+        {
+          scaleX: 1,
+        },
+        "<"
+      )
+      //메인 비주얼 이미지 나타나기
+      .to(
+        ".visual_img .black",
+        {
+          opacity: 0,
+          duration: 0.5,
+        },
+        "-=.2"
+      )
+      //로고 커지기
+      .to(
+        "h1",
+        {
+          scale: 1,
+          y: 0,
+          duration: 0.8,
+        },
+        "+=.2"
+      )
+      //헤더 나타나기
+      .fromTo(
+        "header > :is(button, .lan), .main_visual .copy",
+        {
+          y: -50,
+          duration: 0.5,
+        },
+        {
+          opacity: 1,
+          y: 0,
+        },
+        "<"
+      )
+      //메인 비주얼 아래 부분 나타나기
+      .to(
+        ".main_visual .bottom .bottom_line *",
+        {
+          opacity: 1,
+          duration: 0.5,
+        },
+        "<"
+      )
+      .to(".main_visual .bottom .top_line", {
         opacity: 1,
-        y: 0,
-      },
-      "<"
-    )
-    //메인 비주얼 아래 부분 나타나기
-    .to(
-      ".main_visual .bottom .bottom_line *",
-      {
-        opacity: 1,
         duration: 0.5,
-      },
-      "<"
-    )
-    .to(".main_visual .bottom .top_line", {
-      opacity: 1,
-      duration: 0.5,
-    })
-    .add(() => {
-      document.body.style.overflow = "auto";
-    });
+      })
+      .add(() => {
+        document.body.style.overflow = "auto";
+      });
+
+    return () => {
+      location.reload();
+    };
+  });
 });
