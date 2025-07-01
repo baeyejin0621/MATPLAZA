@@ -1,5 +1,10 @@
 "use strict";
 
+/*브라우저 넓이 변경될 때마다 새로고침하기*/
+window.addEventListener("resize", () => {
+  location.reload();
+});
+
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -80,9 +85,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
       .timeline({
         scrollTrigger: {
           trigger: ".sec_wrapper",
-          start: "20% 0%",
-          end: "39% 0%",
-          duration: 3,
+          start: "10% 0%",
+          end: "17% 0%",
+          duration: 2,
           scrub: 1,
         },
       })
@@ -146,9 +151,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
       .to(
         ".visual_img",
         {
-          width: 1395,
-          maxWidth: 1395,
-          x: "-50%",
+          width: 1199,
+          maxWidth: 1199,
           duration: 0.5,
         },
         "-=.1"

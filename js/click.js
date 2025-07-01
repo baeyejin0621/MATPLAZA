@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       menu.style.color = "#fff";
       menu.innerText = "CLOSE";
       //언어 선택
-      if (window.innerWidth < 1001) {
+      if (window.innerWidth < 1301) {
         lan.style.display = "flex";
       }
       lan.style.color = "#fff";
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       menu.innerHTML =
         "MENU<div class='line1'></div><div class='line2'></div><div class='line3'></div><div class='line4'></div>";
       //언어 선택
-      if (window.innerWidth < 1001) {
+      if (window.innerWidth < 1301) {
         lan.style.display = "none";
       }
       lan.style.color = "#121212";
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       menu.innerHTML =
         "MENU<div class='line1'></div><div class='line2'></div><div class='line3'></div><div class='line4'></div>";
       //언어 선택
-      if (window.innerWidth < 1001) {
+      if (window.innerWidth < 1301) {
         lan.style.display = "none";
       }
       lan.style.color = "#121212";

@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /*모바일*/
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 1000px) {
   /*헤더*/
   header {
     padding: 0 15px;
@@ -47,7 +47,7 @@
     font-size: 14px;
     line-height: 15px;
     top: -12px;
-    left: 90px;
+    left: 75px;
   }
 
   /*언어 선택*/
@@ -533,5 +533,129 @@
   footer .terms span {
     font-size: 14px;
     line-height: 17px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  /*전체 메뉴*/
+  #menu {
+    padding-top: 100px;
+  }
+
+  #menu li {
+    margin-bottom: 30px;
+  }
+
+  #menu a {
+    font-size: 5vw;
+    line-height: 5vw;
+  }
+
+  #menu .submenu a {
+    font-size: 3vw;
+    line-height: 3vw;
+  }
+
+  .all_menu .bottom {
+    gap: 13px;
+    justify-content: flex-start;
+    font-size: 14px;
+  }
+
+  /*메인 비주얼*/
+  .visual_img {
+    width: 46vw;
+    height: 46vw;
+    top: 196px;
+    left: calc(50% - 23vw);
+  }
+
+  /*두번째 섹션*/
+  .sec2 {
+    margin-top: 100px;
+    height: calc(46vw + 100px);
+  }
+
+  .sec2 h2 {
+    font-size: 4vw;
+  }
+
+  /*세번째 섹션*/
+  .sec3 {
+    margin-top: 50px;
+  }
+
+  .sec3_inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .sec3 .card {
+    width: calc(50% - 7.5px);
+  }
+
+  .sec3 .card .right h2 {
+    font-size: 3.3vw;
+    letter-spacing: -0.01em;
+  }
+
+  .sec3 .card .right h2 br {
+    display: none;
+  }
+
+  .sec3 .card .right p {
+    height: 60px;
+    margin-top: 10px;
+  }
+
+  /*네번째 섹션*/
+  .sec4 .box_wrap {
+    flex-direction: row;
+  }
+
+  .sec4 .box_wrap a {
+    flex: 1 1;
+    height: 240px;
+  }
+
+  /*다섯번째 섹션*/
+  .sec5 .swiper-slide {
+    width: 415px;
+  }
+
+  .sec5 .swiper-slide .thumb {
+    height: 50vw;
+  }
+
+  /*여섯번째 섹션*/
+  .sec6 .content {
+    height: 350px;
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  /*헤더*/
+  header > .lan {
+    display: none;
+  }
+
+  /*로고*/
+  h1 {
+    width: calc(100vw - 80px);
+    transform: translate(50%, -38px) scale(0.2, 0.2);
+  }
+
+  /*메인 비주얼*/
+  .visual_img > img:last-of-type {
+    width: 100%;
+    height: 50vh;
+  }
+}
+
+@media screen and (min-width: 1301px) {
+  /*언어 선택*/
+  header > .lan {
+    display: flex;
   }
 }
