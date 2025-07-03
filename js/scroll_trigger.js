@@ -154,6 +154,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
           width: 1199,
           maxWidth: 1199,
           duration: 0.5,
+          x: "-50%",
         },
         "-=.1"
       );
